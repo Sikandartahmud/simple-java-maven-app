@@ -7,7 +7,7 @@ pipeline {
                 sh '''
                 chmod 777 scripts/prod.sh
                 scripts/prod.sh
-		ls -ltra /home/ubuntu
+		echo test
                 '''
             }
         }
