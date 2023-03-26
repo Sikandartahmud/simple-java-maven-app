@@ -4,7 +4,10 @@ pipeline {
     stages {
         stage('PrepareEnvironment') {
             steps {
-                echo 'Preparing the deployment environment'
+                sh '''
+                chmod 777 scripts/prod.sh
+                scripts/prod.sh
+                '''
             }
         }
         stage('CopyConfig') {
